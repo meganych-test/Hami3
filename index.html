@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Clicker 4</title>
+    <title>Unity WebGL Player | Hamster Inc</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=720 height=1280 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,26 +20,9 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Clicker 4</div>
+        <div id="unity-build-title">Hamster Inc</div>
       </div>
     </div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script>
-    window.onload = function() {
-        const tg = window.Telegram.WebApp;
-        
-        // Expand the Web App to full height
-        tg.expand();
-
-        // Set the background color to black
-        tg.setBackgroundColor('#000000');
-
-        // Set the header color (you might want to adjust this)
-        tg.setHeaderColor('#000000');
-
-        // Additional initialization code can go here
-    };
-</script>
     <script>
 
       var container = document.querySelector("#unity-container");
@@ -74,15 +57,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Clicker 4 Build.loader.js";
+      var loaderUrl = buildUrl + "/Hamster Inc.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Clicker 4 Build.data.unityweb",
-        frameworkUrl: buildUrl + "/Clicker 4 Build.framework.js.unityweb",
-        codeUrl: buildUrl + "/Clicker 4 Build.wasm.unityweb",
+        dataUrl: buildUrl + "/Hamster Inc.data.br",
+        frameworkUrl: buildUrl + "/Hamster Inc.framework.js.br",
+        codeUrl: buildUrl + "/Hamster Inc.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Meganych",
-        productName: "Clicker 4",
-        productVersion: "1.0.2",
+        companyName: "DefaultCompany",
+        productName: "Hamster Inc",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
       };
 
@@ -111,8 +94,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "720px";
-        canvas.style.height = "1280px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       loadingBar.style.display = "block";
